@@ -38,11 +38,16 @@ def menu(crystal_count):
         round_count = round_count + 1
 
         while True:
-            # Stop asking for a replay if the game has already been won or lost.
+            # Stop asking for a replay if the game has already been won or lost or not enough crystals for particular game.
             if crystal_count <= 5 or crystal_count >= 300: break
+            if selection == "asteroid mining" and crystal_count < 10:
+                break
+
             print(f"Current Crystal Count: {crystal_count}")
             replay = input("Enter yes to replay this game, or no to choose a new one: ")
             replay = check_selection(replay, "replay")
+
+            
 
             # Replay the same game immediately, or return to the main menu.
             match replay:
