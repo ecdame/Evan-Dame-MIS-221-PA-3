@@ -1,0 +1,7 @@
+Extras:
+
+Number of rounds played is tracked
+
+Replays of games are possible, and round count/crystal count updates with them.
+
+Rules are available, and the user can choose whether or not to display them.
